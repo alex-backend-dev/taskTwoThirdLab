@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace taskTwoThirdLab
 {
@@ -23,7 +23,7 @@ namespace taskTwoThirdLab
             {
                 term = Math.Pow(-1, n) / GetFactorial(n);
 
-                if (Math.Abs(term) > precision)
+                if (Math.Abs(term) < precision)
                     break;
 
                 sum += term;
