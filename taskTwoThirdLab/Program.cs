@@ -17,16 +17,13 @@ namespace taskTwoThirdLab
         public static double GetSum(double precision)
         {
             double sum = 0;
-            double term;
+            int n = 0;
 
-            for (int n = 0; ; n++)
+            while (Math.Pow(-1, n) / GetFactorial(n) > precision)
             {
-                term = Math.Pow(-1, n) / GetFactorial(n);
-
-                if (Math.Abs(term) < precision)
-                    break;
-
-                sum += term;
+                sum+= Math.Pow(-1, n) / GetFactorial(n);
+                
+                n++;   
             }
 
             return sum;
